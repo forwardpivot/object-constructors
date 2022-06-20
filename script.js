@@ -2,13 +2,23 @@ function Person(name,age,job) {
     this.name = name;
     this.age = age;
     this.job = job;
-    this.getInfo = function() {
-        console.log(`My name is ${name}. I am ${age} years old, and 
-        my job is ${job}`);
-    }
+}
+Person.prototype.getInfo = function() {
+    console.log(`My name is ${this.name}. I am ${this.age} years old, and 
+    my job is ${this.job}`);
 }
 
-const bruce = new Person("Bruce Wayne", 30, "Industrialist");
+function Hero(alterEgo, hideout) {
+    this.name = name;
+    this.age = age;
+    this.job = job;
+    this.alterEgo = alterEgo;
+    this.hideout = hideout;
+}
+
+Hero.prototype = Object.create(Person.prototype);
+
+const bruce = new Hero("Bruce Wayne", 30, "Industrialist", "Batman", "Batcave");
 
 bruce.getInfo();
 
