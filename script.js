@@ -1,8 +1,13 @@
+/*This is a constructor function*/
 function Person(name,age,job) {
     this.name = name;
     this.age = age;
     this.job = job;
 }
+/**
+ * These are functions that are defined on the prototype of the Person Object. 
+ * All Person Objects share a single instance of the function. It saves memory
+ */
 Person.prototype.getInfo = function() {
     console.log(`My name is ${this.name}. I am ${this.age} years old, and 
     my job is ${this.job}`);
@@ -21,7 +26,9 @@ function Hero(name, age, job, alterEgo, hideout) {
         console.log(`${alterEgo} is in the ${hideout}`);
     }
 }
-
+/**
+ * This allows the Objects to Inherit the functions on the prototype. I guess
+ */
 Hero.prototype = Object.create(Person.prototype);
 Person.prototype = Object.create(Person.prototype);
 
@@ -33,4 +40,3 @@ bruce.secretIdentity();
 vicki.getInfo();
 vicki.sayHi();
 bruce.sayHi();
-
