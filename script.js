@@ -7,6 +7,9 @@ Person.prototype.getInfo = function() {
     console.log(`My name is ${this.name}. I am ${this.age} years old, and 
     my job is ${this.job}`);
 }
+Person.prototype.sayHi = function() {
+    console.log(`${this.name} says hi`);
+}
 
 function Hero(name, age, job, alterEgo, hideout) {
     this.name = name;
@@ -28,4 +31,6 @@ const vicki = new Person("Vicki Vale", 30, "Journalist");
 bruce.getInfo();
 bruce.secretIdentity();
 vicki.getInfo();
+vicki.sayHi();
+bruce.sayHi();
 
