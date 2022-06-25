@@ -4,11 +4,14 @@
 //     this.age = age;
 //     this.job = job;
 // }
-    const person = (name, age, job) => {
+    const Person = (name, age, job) => {
         const getInfo = () => console.log(`My name is ${name}. I am ${age} years old, and 
         my job is ${job}`);
         return {name, age, job, getInfo};
     }
+
+    const bruce = person("Bruce Wayne", 30, "Industrialist");
+    bruce.getInfo();
 // /**
 //  * These are functions that are defined on the prototype of the Person Object. 
 //  * All Person Objects share a single instance of the function. It saves memory
@@ -45,6 +48,3 @@
 // vicki.getInfo();
 // vicki.sayHi();
 // bruce.sayHi();
-
-const bruce = person("Bruce Wayne", 30, "Industrialist");
-bruce.getInfo();
