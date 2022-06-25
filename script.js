@@ -10,7 +10,7 @@
         return {name, age, job, getInfo};
     }
 
-    const bruce = person("Bruce Wayne", 30, "Industrialist");
+    const bruce = Person("Bruce Wayne", 30, "Industrialist");
     bruce.getInfo();
 // /**
 //  * These are functions that are defined on the prototype of the Person Object. 
